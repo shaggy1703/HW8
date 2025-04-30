@@ -35,18 +35,17 @@ public class Main {
         System.out.println("Task4");
         System.out.println();
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1; i >= 0; i--){
-            System.out.print (reverseFullName[i]);
-        }
         int point1 = 0;
-        int point2 = reverseFullName.length-1;
-        for (int i = 0; i < reverseFullName.length / 2; i++){
+        int point2 = reverseFullName.length - 1;
+
+        while (point1 < point2) {
             char temp = reverseFullName[point1];
             reverseFullName[point1] = reverseFullName[point2];
-            reverseFullName[point2]= temp;
+            reverseFullName[point2] = temp;
             point1++;
             point2--;
         }
+        System.out.println(new String(reverseFullName));
 
 
 
